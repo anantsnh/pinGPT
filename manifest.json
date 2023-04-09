@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "PinGPT",
+    "version": "1.0.0",
+    "description": "Pin chats in ChatGPT",
+    "icons": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "action": {
+        "default_icon": {
+            "16": "assets/icon16.png",
+            "48": "assets/icon48.png",
+            "128": "assets/icon128.png"
+        },
+        "default_popup": ""
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://chat.openai.com/*"
+            ],
+            "css": [
+                "css/content.css"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "js/background.js"
+    }
+}

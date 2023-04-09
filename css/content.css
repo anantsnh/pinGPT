@@ -1,0 +1,18 @@
+.chat-gpt-star {
+    /* Width and height according to your icon size */
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    background-image: url('../assets/emptyStarIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.chat-gpt-star.pinned {
+    background-image: url('../assets/filledStarIcon.png');
+}
+
+.chat-gpt-star.pinned,
+.pinned-chat .chat-gpt-star {
+    background-image: url('../assets/solid_star.png');
+}
